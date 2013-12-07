@@ -1,10 +1,104 @@
 body {
-  padding-top: 60px;
-  padding-bottom: 30px;
+  font-size: 16px;
+}
+
+header {
+  background-color: #000;
+  margin: 0;
+  padding: 1.2em;
+  font-size: .85em;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+}
+
+header ul li  {
+  display: inline;
+  margin-left: 1.0em;
+}
+
+header ul li a {
+  color: #ccc;
+  font-size: 1.00em;
+  text-decoration: none;
+}
+
+header ul li:first-child a {
+  font-size: 1.20em;
+  text-decoration: none;
+}
+
+.selected {
+  color: #fff;
+}
+
+.container {
+  margin: 2.5em;
+  max-width: 42em;
+  color: #444;
+}
+
+.container a {
+  color: #2a6496;
+}
+
+@media (max-width: 767px) { .container { margin: 1.5em; max-width: 42em; } }
+
+
+
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5em 1em 0.5em 1em;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 
 em {
   color: #468847;
+}
+
+.button {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  display: inline-block;
+  height: 2em;
+  vertical-align: middle;
+}
+
+.button a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1.5em 1.0em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.button a:hover {
+  color: #fff;
+  background-color: #47a447;
+  border-color: #398439;
+  text-decoration: none;
+}
+
+footer {
+  border-top: 1px solid;
+}
+
+footer div {
+  margin-left: 0em;
+  padding: 1em;
+}
+
+
+body {
 }
 
 table {
@@ -21,26 +115,12 @@ table {
   }
 }
 
-.csusbdt-video-btn {
-  text-align: right;
-  margin: 0;
-  padding: 0;
-}
-
 .csusbdt-box {
   padding: 9px 14px;
   margin-bottom: 14px;
   background-color: #f5f5f5;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
-}
-
-.csusbdt-navbar-brand {
-  color: #fff;   /* problem: this has no effect */
-}
-
-.csusbdt-under-menu {
-  margin-top: 36px;
 }
 
 .csusbdt-code-title {
@@ -56,9 +136,5 @@ table {
   border-left: 4px solid #9ecd9f;
   color: #468847;
   background: #ecf5ec;
-}
-
-.csusbdt-assert-table {
-  max-width: 32em;
 }
 
