@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="/css/csusbdt.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/csusbdt.css">
 
     <title>{{page.title}}</title>
 
@@ -23,24 +23,24 @@
     <header>
       <ul>
 {% if page.id == "index" %}
-        <li><a href="/" class="selected">CSE 201</a></li>
-        <li><a href="/syllabus.html">syllabus</a></li>
-        <li><a href="/contact.html">contact</a></li>
-        <li><a href="/id.html">grades</a></li>
+        <li><a href="./" class="selected">CSE 201</a></li>
+        <li><a href="syllabus.html">syllabus</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="id.html">grades</a></li>
 {% elsif page.id == "id" %}
-        <li><a href="/" class="selected">CSE 201</a></li>
+        <li><a href="./" class="selected">CSE 201</a></li>
 {% elsif page.id == "syllabus" %}
-        <li><a href="/">CSE 201</a></li>
-        <li><a href="/syllabus.html" class="selected">syllabus</a></li>
-        <li><a href="/contact.html">contact</a></li>
+        <li><a href="./">CSE 201</a></li>
+        <li><a href="syllabus.html" class="selected">syllabus</a></li>
+        <li><a href="contact.html">contact</a></li>
 {% elsif page.id == "contact" %}
-        <li><a href="/">CSE 201</a></li>
-        <li><a href="/syllabus.html">syllabus</a></li>
-        <li><a href="/contact.html" class="selected">contact</a></li>
+        <li><a href="./">CSE 201</a></li>
+        <li><a href="syllabus.html">syllabus</a></li>
+        <li><a href="contact.html" class="selected">contact</a></li>
 {% else %}
-        <li><a href="/" class="selected">CSE 201</a></li>
-        <li><a href="/syllabus.html">syllabus</a></li>
-        <li><a href="/contact.html">contact</a></li>
+        <li><a href="./" class="selected">CSE 201</a></li>
+        <li><a href="syllabus.html">syllabus</a></li>
+        <li><a href="contact.html">contact</a></li>
 {% endif %}
       </ul>
     </header>

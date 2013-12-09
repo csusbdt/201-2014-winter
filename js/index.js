@@ -1,7 +1,7 @@
 (function() {
 
   schedule = [
-    ['L1',  20, new Date(2014,  1, 10), '<a href="labs/linux.html">L1: Command Line</a>'],
+    ['L1',  20, new Date(2014,  1, 10), '<a href="L1.html">L1: Command Line</a>'],
     ['L2',  30, new Date(2014,  1, 14), '<a href="labs/expressions.html">L2: Expressions</a>'],
     ['A1',  50, new Date(2014,  1, 19), '<a href="assignments/analyze.html">A1: Analyzing Code</a>'],
     ['Q1', 200, new Date(2014,  1, 23), 'Quiz 1'],
