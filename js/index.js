@@ -25,7 +25,7 @@
     app.buildTable();
     currentStudentId = localStorage.getItem('currentStudentId');
     if (currentStudentId) {
-      app.loadScript('/grades.js?x=' + Math.random());
+      app.loadScript('grades.js?x=' + Math.random());
     }
   };
 
