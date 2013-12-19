@@ -32,12 +32,4 @@
     }
   };
 
-  app.onClear = function() {
-    if (currentStudentId) {
-      localStorage.removeItem('currentStudentId');
-      document.getElementById('currentStudentId').removeAttribute('id');
-      currentStudentId = null;
-    }
-  }
-
 })();

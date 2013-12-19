@@ -47,6 +47,7 @@
 
   app.setStudentId = function(id) {
     localStorage.setItem('studentId', id);
+    document.getElementById('score-column').innerHTML = id;
     // Insert scores in table.
     var rows = document.getElementsByTagName('tbody')[0].children;
     for (var i = 0; i < rows.length; ++i) {
