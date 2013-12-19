@@ -9,7 +9,8 @@
 
   function onclick(e) {
     if (currentStudentId) {
-      document.getElementById('currentStudentId').removeAttribute('id');
+      var currentStudent = document.getElementById('currentStudentId');
+      if (currentStudent) currentStudent.removeAttribute('id');
     }
     currentStudentId = e.target.innerHTML;
     localStorage.setItem('studentId', currentStudentId);
@@ -19,7 +20,7 @@
   app.onloadScores = function() {
     var ul = document.getElementById('ids');
     var ids = Object.keys(app.scores).sort();
-    ids.unshift('AVG');
+    ids.unshift('Avg');
     for (var i = 0; i < ids.length; ++i) {
       var studentId = ids[i];
       var li = document.createElement('li');

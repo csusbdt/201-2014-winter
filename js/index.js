@@ -18,8 +18,6 @@
     ['F' , 400, new Date(2014,  1, 23), 'Final Exam']
   ];
 
-  var scoresUrl = 'https://docs.google.com/spreadsheet/pub?key=0Aq3la2PXzB0YdGRTOWJmbmEySUpjVXNGeWhiYTMyN1E&single=true&gid=1&output=csv';
-
   app.onload = function() {
     app.buildTable();
     app.loadScript('scores.js?x=' + Math.random());
@@ -62,7 +60,7 @@
   app.onloadScores = function() {
     app.computeAverage();
     var id = localStorage.getItem('studentId');
-    if (id === null) id = 'AVG';
+    if (id === null) id = 'Avg';
     app.setStudentId(id);
   };
 
@@ -83,7 +81,7 @@
       if (n > 0) avgs.push(total/n);
       else avgs.push(null);
     }  
-    app.scores.AVG = avgs;
+    app.scores.Avg = avgs;
   };
 
 })();
