@@ -12,7 +12,7 @@ header {
   background-color: #000;
   margin: 0;
   padding: 1.2em;
-  font-size: .85em;
+  font-size: 1.00em;
 }
 
 header ul {
@@ -23,6 +23,7 @@ header ul {
 header ul li  {
   display: inline;
   margin-left: 1.0em;
+  color: #ccc;
 }
 
 header ul li a {
@@ -49,6 +50,14 @@ header ul li:first-child a {
 
 .container a {
   color: #2a6496;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.3em;
 }
 
 @media (max-width: 767px) { .container { margin: 1.5em; max-width: 42em; } }
@@ -157,13 +166,13 @@ th, td {
   }
 }
 
-.csusbdt-code-title {
+.code-title {
   color: #468847;
   padding: 10px;
   font-size: 18px;
 }
 
-.csusbdt-callout {
+.callout {
   margin: 20px 0;
   padding: 20px;
   border: 1px solid #c5e1c5;
