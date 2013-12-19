@@ -3,8 +3,8 @@
   var currentStudentId = null;
 
   app.onload = function() {
-    app.loadScript('grades.js?x=' + Math.random());
-    currentStudentId = localStorage.getItem('currentStudentId');
+    app.loadScript('scores.js?x=' + Math.random());
+    currentStudentId = localStorage.getItem('studentId');
   };
 
   function onclick(e) {
@@ -12,13 +12,14 @@
       document.getElementById('currentStudentId').removeAttribute('id');
     }
     currentStudentId = e.target.innerHTML;
-    localStorage.setItem('currentStudentId', currentStudentId);
+    localStorage.setItem('studentId', currentStudentId);
     e.target.setAttribute('id', 'currentStudentId');
   }
 
-  app.onloadGrades = function() {
+  app.onloadScores = function() {
     var ul = document.getElementById('ids');
-    var ids = Object.keys(grades).sort();
+    var ids = Object.keys(app.scores).sort();
+    ids.unshift('AVG');
     for (var i = 0; i < ids.length; ++i) {
       var studentId = ids[i];
       var li = document.createElement('li');

@@ -18,14 +18,11 @@
     ['F' , 400, new Date(2014,  1, 23), 'Final Exam']
   ];
 
-  var currentStudentId = null;
+  var scoresUrl = 'https://docs.google.com/spreadsheet/pub?key=0Aq3la2PXzB0YdGRTOWJmbmEySUpjVXNGeWhiYTMyN1E&single=true&gid=1&output=csv';
 
   app.onload = function() {
     app.buildTable();
-    currentStudentId = localStorage.getItem('currentStudentId');
-    if (currentStudentId) {
-      app.loadScript('grades.js?x=' + Math.random());
-    }
+    app.loadScript('scores.js?x=' + Math.random());
   };
 
   app.buildTable = function() {
@@ -41,21 +38,51 @@
       td = document.createElement('td'); // points
       td.innerHTML = schedule[i][1];
       tr.appendChild(td);
+      td = document.createElement('td'); // score
+      td.innerHTML = '';
+      tr.appendChild(td);
       tbody.appendChild(tr);
     }
   };
 
-  app.onloadGrades = function() {
-    var tr = document.getElementsByTagName('thead')[0].children[0];
-    var th = document.createElement('th');
-    th.innerHTML = 'Score';
-    tr.appendChild(th);
+  app.setStudentId = function(id) {
+    localStorage.setItem('studentId', id);
+    // Insert scores in table.
     var rows = document.getElementsByTagName('tbody')[0].children;
     for (var i = 0; i < rows.length; ++i) {
-      var score = document.createElement('td');
-      score.innerHTML = grades[currentStudentId][i];
-      rows[i].appendChild(score);
+      if (app.scores[id][i] !== null) {
+        rows[i].lastChild.innerHTML = app.scores[id][i];
+      } else {
+        rows[i].lastChild.innerHTML = '';
+      }
     }
+  }
+
+  app.onloadScores = function() {
+    app.computeAverage();
+    var id = localStorage.getItem('studentId');
+    if (id === null) id = 'AVG';
+    app.setStudentId(id);
+  };
+
+  app.computeAverage = function() {
+    var students = Object.keys(app.scores);
+    var avgs = [];
+    for (var j = 0; j < app.scores[students[0]].length; ++j) {
+      var total = 0;
+      var n = 0;
+      for (var i = 0; i < students.length; ++i) {
+        var id = students[i];
+        var score = app.scores[id][j];
+        if (score !== null) {
+          total += score;
+          ++n;
+        }
+      }
+      if (n > 0) avgs.push(total/n);
+      else avgs.push(null);
+    }  
+    app.scores.AVG = avgs;
   };
 
 })();
