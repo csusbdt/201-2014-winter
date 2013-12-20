@@ -78,7 +78,11 @@ pre {
 }
 
 em {
-  color: #000;
+  color: #333;
+}
+
+code {
+  color: #900
 }
 
 dl dt {
