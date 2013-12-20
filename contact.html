@@ -9,12 +9,33 @@ dl {
   width: 16em;
   margin: 2em 0 0 2em;
 }
+
+.borderTop {
+  border-top: #555 solid 1px;
+  padding-top: 1em;
+}
+
+@media(min-width: 640px) {
+  .borderTop {
+    border-top: 0;
+    padding-top: 0;
+  }
+  dl {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
 </style>
 
 <dl>
-  <dt>Instructor</dt>    <dd>Dr. David Turner</dd>
+  <dt>Instructor</dt>    <dd><a href="http://cse.csusb.edu/turner/">Dr. David Turner</a></dd>
   <dt>Email</dt>         <dd>dturner@csusb.edu</dd>
   <dt>Phone</dt>         <dd>909-537-5428</dd>
   <dt>Office</dt>        <dd>JB 340</dd>
   <dt>Office hours</dt>  <dd>Mon 3:30pm - 6:30pm<br>Wed 6:00pm - 7:00pm</dd>
+</dl>
+
+<dl class="borderTop">
+  <dt>Teaching Assistant</dt>  <dd>Gerren Willis</dd>
+  <dt>Email</dt>               <dd>willisg@coyote.csusb.edu</dd>
 </dl>
