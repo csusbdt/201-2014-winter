@@ -29,15 +29,19 @@
       var tr = document.createElement('tr');
       var td = document.createElement('td'); // activity column
       td.innerHTML = schedule[i][3];
+      td.className = 'activity';
       tr.appendChild(td);
       td = document.createElement('td'); // deadline
       td.innerHTML = app.extractDate(schedule[i][2]);
+      td.className = 'deadline';
       tr.appendChild(td);
       td = document.createElement('td'); // points
       td.innerHTML = schedule[i][1];
+      td.className = 'points';
       tr.appendChild(td);
       td = document.createElement('td'); // score
       td.innerHTML = '';
+      td.className = 'score';
       tr.appendChild(td);
       tbody.appendChild(tr);
     }

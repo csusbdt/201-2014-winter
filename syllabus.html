@@ -1,42 +1,93 @@
 ---
 layout: default
 id: syllabus
-title: CSE 405 
+title: CSE 201 
 ---
 
 <style>
+.table {
+  margin: 1em auto;
+}
+
+@media(min-width: 36) { .table { width: 34em; } }
+
+.table caption {
+  caption-side: top;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #555;
+}
+
+.table th {
+  text-align: center;
+}
+
+.table th, .table td {
+  border: 1px solid #bbb;
+  padding: .3em .5em;
+}
+
+.table tr td:first-child {
+  width: 33%;
+  font-style: italic;
+}
+
 .letter-grades {
   max-width: 12em;
   margin: auto;
 }
+
+.letter-grades td {
+  padding-left: 1.5em;
+}
+
+.letter-grades td:first-child {
+  padding-left: 0.5em;
+}
 </style>
 
 <dl>
-  <dt>Course</dt>          <dd>CSE 405 Server Programming</dd>
+  <dt>Course</dt>          <dd>CSE 201 Introduction to Computer Science I</dd>
   <dt>School</dt>          <dd>CSUSB</dd>
   <dt>Quarter</dt>         <dd>Winter 2014</dd>
-  <dt>Prerequisites</dt>   <dd>CSE 322 or knowledge of Web page programming</dd>
-  <dt>Lecture</dt>         <dd>Mon/Wed 12:00 - 1:15, JB 113</dd>
-  <dt>Lab A</dt>           <dd>Mon 1:30 - 3:20, JB 113</dd>
-  <dt>Lab B</dt>           <dd>Wed 1:30 - 3:20, JB 113</dd>
-  <dt>Textbook</dt>        <dd>Various readings available for free on the Web</dd>
+  <dt>Prerequisites</dt>   <dd>Some exposure to programming</dd>
+  <dt>Lecture</dt>         <dd>Mon 12:00 - 1:15, JB 113<br>Wed 12:00 - 1:15, JB 113</dd>
+  <dt>Lab A</dt>           <dd>Mon 1:30 - 3:20, JB 359</dd>
+  <dt>Lab B</dt>           <dd>Wed 1:30 - 3:20, JB 359</dd>
+  <dt>Textbook</dt>        <dd>Big C++, Second edition 
+                               by Kay Horstmann and Timothy Budd<br>
+                               (or other equivalent book)
+                           </dd>
   <dt>Instructor</dt>      <dd>Dr. David Turner</dd>
-  <dt>Office hours</dt>    <dd>Mon 3:30 - 6:30, Wed 6:00 - 7:00, JB 340</dd>
+  <dt>Office hours</dt>    <dd>Mon 3:30 - 6:30, JB 340 <br>Wed 6:00 - 7:00, JB 340</dd>
 </dl>
 
 <h2>Course Format</h2>
 
 <p>
-This course is 100% Web-based with an optional weekly meeting on campus.
-All reading material is freely available on the Web.
-In addition to the optional weekly meetings,
-you can communicate with the class as a whole
-by posting to the CSUSB CSE 405 Winter 2014 Google Group.
+You should carefully study the first 6 chapters of the textbook or equivalent introductory book on
+C++. During our weekly lab sessions, you will perform activities to improve your understanding
+of the material presented in lecture and in the textbook.  I will assign programming problems that
+you will complete inside and outside of lab.  There will be quizzes and a final exam.
 </p>
 
+<p>
+All required work is detailed in the course schedule, published on the Web.  
+I will announced in
+class or by email changes to required work, points, deadlines and quiz dates.
 </p>
-There are no exams; your grade is based on the timely completion 
-of a sequence of assignments, which is maintained at the following site.
+
+<p>
+I encourage you to collaborate with other students to complete the labs and assignments.
+However, you must submit assigned work individually and you are required to understand what
+you submit. I will use quizzes and a final exam to assess your understanding of submitted work
+for labs and assignments.
+</p>
+
+<p>
+There are 2 ways to submit labs and assignments: by email or through a revision control system
+called Git. I will provide instruction on how to use Git for this purpose.
 </p>
 
 <div class="well">https://github.com/csusbdt/405-2014</div>
@@ -49,108 +100,129 @@ I will evaluate your work by looking at your source code and testing a running i
 
 <h2>Course Goals</h2>
 
-<p>
-The goal of this course is to increase your understanding of server programming.
-Certain topics covered in this course 
-are common to all server programming problems, such as
-communication protocols, authentication, security, database access, and logging.
-Other topics are specific to the development environments of individual projects,
-such as Web applications, Git, Android SDK, Javascript, Node.js, and CouchDB.
-Therefore, the course encourages the acquisition of knowledge
-that is common to all server programming problems while developing specialized skills.
-</p>
-
-<p>
-The techniques that you learn in this course for building Web applications
-can be applied to solve a larger set of programming problems that rely on the
-HTTP protocol, including native desktop and mobile applications that
-store application state in the cloud and interact with other users and systems.
-<p>
+<ul>
+  <li>Students will learn how to write programs in the C++ language.</li>
+  <li>Students will improve computational thinking skills, 
+      which can be used to solve a wide range of problems.</li>
+</ul>
 
 <h2>Learning Objectives</h2>
 
 <ul>
-<li>Learn how to develop server-side logic in Javascript using Node.js.</li>
-<li>Learn how to use a CouchDB database.</li>
-<li>Learn how to create scalable cloud computing services.</li>
-<li>Learn common security problems and how to avoid them.</li>
-<li>Learn how to use ajax and DOM manipulation to create single-page Web apps.</li>
-<li>Learn how to develop Web­based mobile applications.</li>
+  <li>Learn how to devise algorithms that solve computing problems.</li>
+  <li>Learn about primitive data types.</li>
+  <li>Learn about user­defined data types.</li>
+  <li>Learn about flow control constructs.</li>
+  <li>Learn about functions.</li>
+  <li>Learn about arrays and vectors.</li>
+  <li>Learn how to compile code into executable files.</li>
+  <li>Learn about version control systems.</li>
+  <li>Learn how to use the Linux command line interface.</li>
 </ul>
 
 <h2>Labs/Assignments</h2>
 
 <p>
-In this course, you will complete a sequence of assignments.
-The assignments involve research, programming and problem solving.
-I will grade your performance on programming assignments based on the following criteria.
-</p>
-
-<div class="csusbdt-background">
-<ul class="list-group">
-  <li class="list-group-item">
-    <h4>Readability</h4>
-    <p>Is source code well-organized? Have unnecessary variables and
-       logic been removed from the code?  Does the indentation and line
-       spacing show logical structure?  Is indentation and spacing done
-       consistently?  Are concerns separated when possible?  Are the
-       responsibilities of components clear and consistently assigned?
-       Does the code contain names for variables, functions and classes
-       that unambiguously express their purpose in the program?  Are
-       comments included when needed? Are superfluous comments omitted?
-    </p>
-    <p class="text-warning">
-      Program readability is important because real-world programs
-      are read over and over again in the process of fixing bugs and adding new functionality.
-      For this reason, writing a program to produce required behavior is not good enough for a full
-      score in this class; you must also write code that is readable by humans.  
-    </p>
-  </li>
-  <li class="list-group-item">
-    <h4>Correctness</h4>
-    <p>Has the student correctly solved the problems?  Is the application
-       interface and internal documentation free of grammar and spelling errors?
-    </p>
-  </li>
-  <li class="list-group-item">
-    <h4>Completeness</h4>
-    <p>Has the student met all stated requirements?</p>
-  </li>
-  <li class="list-group-item">
-    <h4>Comprehension</h4>
-    <p>Does the student understand the work they submitted? Can the
-      student explain the submitted work and answer questions about it?
-    </p>
-  </li>
-  <li class="list-group-item">
-    <h4>Timeliness</h4>
-    <p>Has the student completed the assignment in a timely manner?
-       Were materials submitted by the deadline?
-    </p>
-  </li>
-</ul>
-</div>
-
-<h2>System Requirements</h2>
-
-<p>
-You can do all required work in this course using any of the three common operating systems,
-Windows, OS X and Linux.
-All required software can be downloaded and installed for free.
+In this course, you will complete a sequence of assignments and labs.  The assignments involve
+research, programming and problem solving.  The labs also involve research, programming and
+problem solving, but I will generally show you their solutions in advance of their deadlines.
+The work in this course can be completed using the lab computers in JB 359 and JB 358.  The
+work can also be completed outside the labs on your personal computer in any of the 3 common
+operating system environments: Linux, Windows, and OS X.  You have 2 choices when working
+from home: work on a lab machine through a remote connection, or work completely on your
+own computer.  If you work on your own computer, you will need to set up a C++ development
+environment.
 </p>
 
 <p>
-It is probably more convenient to complete the course assignments using a personal computer.
-However, computers are available in JB 358 and JB 359 that you can also use.
-The open times for accessing these labs is available from the CSE website
-or by contacting the CSE main office.
+Programs submitted with compilation errors receive no credit.
 </p>
+
+<p>
+Programs that are incorrect or do not solve the stated problem will lose some or all points.
+</p>
+
+<p>
+Work that is submitted late will lose some or all points.
+</p>
+
+<p>
+If you submit copies of other people’s work, you will lose all points for that work.  However, if you
+work with a partner, you can submit identical programs, but you need to refer to your partner by
+name in a comment at the top of your source code file.
+</p>
+
+<p>
+Writing a program to produce required behavior is not good enough for a full score in this class;
+you must also write code that is readable by humans.  Program readability is important because
+real­world programs are read over and over again in the process of fixing bugs and adding new
+functionality.  Program readability will be evaluated according to the following set of criteria.
+</p>
+
+<table class="table">
+  <caption>Readability Criteria for Source Code</caption>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Organization</td>
+      <td>Is source code well organized?</td>
+    </tr>
+    <tr>
+      <td>Cleanliness</td>
+      <td>Have unnecessary variables and logic been removed from the code?</td>
+    </tr>
+    <tr>
+      <td>Logical indentation</td>
+      <td>Does indentation show logical structure?</td>
+    </tr>
+    <tr>
+      <td>Consistent indentation</td>
+      <td>Does indentation follow a consistent policy?</td>
+    </tr>
+    <tr>
+      <td>Logical spacing</td>
+      <td>Does spacing show logical structure?</td>
+    </tr>
+    <tr>
+      <td>Consistent spacing</td>
+      <td>Does spacing follow a consistent policy?</td>
+    </tr>
+    <tr>
+      <td>Separation of concerns</td>
+      <td>Are concerns separated when possible?</td>
+    </tr>
+    <tr>
+      <td>Responsibilities</td>
+      <td>Are responsibilities of functions and classes clear 
+          and consistent with their names?</td>
+    </tr>
+    <tr>
+      <td>Expressive and clear naming</td>
+      <td>Do variables, functions and classes have names 
+          that clearly express their purpose in the program?</td>
+    </tr>
+    <tr>
+      <td>Necessary comments</td>
+      <td>Are comments included when needed?</td>
+    </tr>
+    <tr>
+      <td>Unnecessary comments</td>
+      <td>Are superfluous comments omitted?</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2>Grading</h2>
 
 <p>
-Each assignment is worth 100 points.  Your score will be computed by dividing the total of all
-points earned by the total possible points.  The normal scale will be used to assign a letter grade.
+Labs, assignments, quizzes and final exam have point values, which are shown on the course
+schedule.  Your percentage score will be computed by dividing the total of all points earned by
+the total possible points.  The normal scale will be used to assign a letter grade.
 </p>
 
 <table class="letter-grades">

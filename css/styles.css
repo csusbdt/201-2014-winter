@@ -8,7 +8,10 @@ body {
   font-size: 16px;
   background-color: #DCDCDC;
   color: #555;
+  padding-bottom: 2.0em;
 }
+
+@media(max-width: 460px) { body { font-size: 14px; } }
 
 header {
   background-color: #696969;
@@ -49,7 +52,8 @@ header a:visited.selected {
 }
 
 @media (min-width: 768px) { .container { margin: 0 auto; width: 749px; } }
-@media (max-width: 767px) { .container { margin: 18px; } }
+@media (max-width: 767px) { .container { margin: 24px; } }
+@media (max-width: 460px) { .container { margin: 8px; } }
 
 h1 {
   font-size: 1.4em;
@@ -60,12 +64,17 @@ h2 {
   font-size: 1.2em;
 }
 
+h3 {
+  font-size: 1.0em;
+}
+
 pre {
-  border: 1px solid #333;
+  border: 1px solid #888;
   border-radius: 4px;
   padding: 0.5em 1em 0.5em 1em;
   word-break: break-all;
   word-wrap: break-word;
+  font-size: .85em;
 }
 
 em {
@@ -73,7 +82,28 @@ em {
 }
 
 dl dt {
+  margin-top: 0.6em;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+dl dd { margin-left: 2.0em; } 
+@media(max-width: 460px) { dl dd { margin-left: 1.5em; } }
+
+dl dd, dl dd p {
   margin-top: 0.4em;
+}
+
+@media(max-width: 460px) {
+  ul {
+    margin-left: 1.5em;
+    padding-left: 0;
+  }
+}
+
+.callout {
+  border-left: 3px solid #999;
+  padding-left: 0.5em;
   font-style: italic;
 }
 
@@ -140,15 +170,4 @@ table a:link {
   text-decoration: none;
   font-style: italic;
 }
-
-/*
-.callout {
-  margin: 20px 0;
-  padding: 20px;
-  border: 1px solid #c5e1c5;
-  border-left: 4px solid #9ecd9f;
-  color: #468847;
-  background: #ecf5ec;
-}
-*/
 
