@@ -51,7 +51,7 @@ header a:visited.selected {
   color: #fff;
 }
 
-@media (min-width: 768px) { .container { margin: 0 auto; width: 749px; } }
+@media (min-width: 768px) { .container { margin: 0 auto; width: 649px; } }
 @media (max-width: 767px) { .container { margin: 24px; } }
 @media (max-width: 460px) { .container { margin: 8px; } }
 
