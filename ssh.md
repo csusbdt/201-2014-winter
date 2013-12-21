@@ -18,13 +18,17 @@ that is outside the firewall but has access to the lab machines.
 This computer is called _jbh3-1_ and is in the domain _cse.csusb.edu_.
 The fully qualified host name is as follows:
 
-    jbh3-1.cse.csusb.edu
+<pre>
+jbh3-1.cse.csusb.edu
+</pre>
 
 As an example, suppose your CSE computer system account name is _alice_
 and you are working from OS X (or Linux).
 Then, open a terminal window and run the following command.
 
-    ssh alice@jbh3-1.cse.csusb.edu
+<pre>
+ssh alice@jbh3-1.cse.csusb.edu
+</pre>
 
 Under Windows, you should establish the SSH connection by running Putty.
 This will give you access to a terminal window connected to jbh3-1.
@@ -40,7 +44,9 @@ You can try to connect to any one of these.
 As an example, suppose we are alice already logged into jbh3-1.
 To connect to jb359-8, run the following command.
 
-    ssh jb359-8
+<pre>
+ssh jb359-8
+</pre>
 
 Note that you can omit the username and domain name in the above command
 because the ssh program will use the username and domain of the host you are running from,
@@ -53,7 +59,9 @@ You can not use programs that rely on a graphical window, such as gedit.
 
 To launch nano to edit or create a file called main.cpp, run the following from the command line.
 
-    nano main.cpp
+<pre>
+nano main.cpp
+</pre>
 
 When you are inside nano, you can save your work by holding down the control key and pressing the 'O' key.
 You can exit by holding down the control key and pressing the 'X' key.
@@ -62,6 +70,8 @@ When you are finished working on the remote machine,
 you should issue the exit command to terminate the connection.
 Enter the exit command twice to terminate both connections, one after another.
 
-    exit
-    exit
+<pre>
+exit
+exit
+</pre>
 

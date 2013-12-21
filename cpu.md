@@ -186,23 +186,35 @@ called an object file.
 Second, you pass the object file to a linker,
 which packages the program into an executable file.
 
-Assuming that the above program is stored in a file named say_hello.s,
-the following command invokes the assembler to produce an object file called say_hello.o.
+Assuming that the above program is stored in a file named <em>hello.s</em>,
+the following command invokes the assembler to produce an object file called <em>hello.o</em>.
 
-    as say_hello.s -o say_hello.o
+<pre>
+as hello.s -o hello.o
+</pre>
 
-The following command transforms the object file say_hello.o
-into an executable file named say_hello (without a file extension).
+<p>
+The following command transforms the object file <em>hello.o</em>
+into an executable file named <em>a.out</em>.
+</p>
 
-    ld say_hello.o -o say_hello
+<pre>
+ld hello.o
+</pre>
 
+<p>
 At this point, you can run the program with the following command.
+</p>
 
-    ./say_hello
+<pre>
+./a.out
+</pre>
 
+<p>
 All programs return a status code.
 By convention, a value of 0 means that the program terminated normally;
 a value other than 0 means the program terminated due to an error.
 These returned values are used by scripts that start programs.
 The above program returns 0 when it exits.
+</p>
 
