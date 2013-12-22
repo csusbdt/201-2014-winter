@@ -1,0 +1,219 @@
+---
+layout: default
+---
+
+<h1>Lab 2: Expressions</h1>
+
+<h2>Learning Objectives</h2>
+
+<ul>
+<li>Understand the notion of a data type.</li>
+<li>Distinguish between the data types int and double.</li>
+<li>Understand the difference between primitive and complex data types.</li>
+<li>Understand how to use the string data type.</li>
+<li>Understand how to change the state of a variable using the assignment operator.</li>
+<li>Understand how to use mathematical operations and parentheses to form expressions.</li>
+<li>Learn how name values using the keyword <code>const</code>.</li>
+<li>Learn how to use the complex data type called <code>string</code>.</li>
+<li>Learn how to invoke (or call) functions.</li>
+<li>Learn about the boolean data type.</li>
+<li>Learn how to use conditional expressions (forms of the <code>if</code> statement).</li>
+<li>Learn how to compare integers, floating point numbers and strings.</li>
+<li>Learn how to write loops and use them to solve problems.</li>
+<li>Learn about nested branches and nested loops.</li>
+</ul>
+
+<h2>Instructions</h2>
+
+<p>
+Create folder <em>~/201/lab_2</em> to contain 
+the files that comprise
+your solutions the problems in this lab.
+</p>
+
+<pre>
+cd ~/201
+mkdir lab_2
+cd lab_2
+pwd
+</pre>
+
+<p>
+Each time you complete work on a source code file that
+solve a problem in this lab,
+add and commit it to your local repository
+and then push this change to your remote repository.
+</p>
+
+<p>
+Do not add <em>a.out</em>, back up files created by your editor, 
+or other derived files to the repository
+unless specifically asked for by the assignment.
+Just add the source code files that you create,
+which will all have a <em>.cpp</em> extension for this lab.
+</p>
+
+<p>
+Make sure that you add, commit and push your files before the deadline.
+</p>
+
+<h3>Exercise 1:  Practice with mathematical expressions (10 points)</h3>
+
+<p>
+Write a console program that prompts the user 
+for 3 double precision floating point values x, y and z.
+Have the program compute and display the following values.
+</p>
+
+<ul>
+<li>the sum of x, y and z</li>
+<li>the sine of x</li>
+<li>the cosine of x plus y divided by z<br>
+    <em>cos((x + y) / z)</em>
+</li>
+<li>the average of x, y and z</li>
+</ul>
+
+<p>
+Place your code in file <em>~/201/lab_2/ex1.cpp</em>.
+</p>
+
+<p>
+After you complete writing, debugging and testing your code,
+add and commit <em>ex1.cpp</em> to your local repository,
+and then push this change to your remote repository.
+The following commands accomplish this.
+</p>
+
+<pre>
+cd ~/201/lab_2
+git add ex1.cpp
+git commit -m "lab 2 ex 1"
+git push
+</pre>
+
+<h2>Exercise 2: Unit conversion (10 points)</h2>
+
+<p>
+Write a console program that converts meters into feet and inches.
+The program starts by asking the user for a measurement in meters.
+The program should accept a floating point number.
+After getting the number, the program computes the number of feet and inches
+equal to the specified number of meters.
+The program outputs feet and inches as whole numbers.
+The program should round the number of inches correctly.
+Test that your program produces the following outputs for the given inputs.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Input</th>
+      <th>Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.3049</td>
+      <td>1 ft 0 in</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>3 ft 3 in</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>6 ft 7 in</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+Place your code in <em>~/201/lab_2/ex2.cpp</em>.
+</p>
+
+<p>
+Add, commit and push.
+</p>
+
+<pre>
+git add ex2cpp
+git commit -m "lab 2 ex 2"
+git push
+</pre>
+
+<h2>Exercise 3: Random numbers (10 points)</h2>
+
+<p>
+Write a program that generates a list of 100 random integers. 
+</p>
+
+<p>
+The C++ standard library contains a pseudo random number generator 
+that you can use to solve this problem.
+The function rand returns a pseudo random number.
+To use rand in your programs, 
+you need to include the cstdlib header as follows.
+</p>
+
+<pre>
+#include &lt;cstdlib>
+</pre>
+
+<p>
+The function rand will return the same sequence of values for a given seed.
+You can change the sequence of values it returns by changing the seed as follows.
+</p>
+
+<pre>
+srand(719);  // Seed the random number generator with 719.
+</pre>
+
+<p>
+The following is an example of how you can use the return value of <code>rand</code>.
+</p>
+
+<pre>
+cout &lt;&lt; rand();
+</pre>
+
+<p>
+You can vary the seed passed into <code>srand</code> by calling the time function.
+Calling the time function with 0 as an argument 
+produces the number of seconds from a given epoch 
+(January 1, 1970 by convention).
+The following code shows how to seed <code>rand</code> with this time.
+</p>
+
+<pre>
+srand(time(0));
+</pre>
+
+<p>
+Use a for loop to generate the 100 list item entries required by this problem. 
+</p>
+
+<p>
+You can save the program output by redirecting standard out to a file.
+To do this, run the program as follows.
+</p>
+
+<pre>
+./a.out > numbers.txt
+</pre>
+
+<p>
+Open <em>numbers.txt</em> in a text editor to see the result.
+</p>
+
+<p>
+Submit the file <em>numbers.txt</em> 
+along with your source code in a file named <em>ex3.cpp</em>. 
+</p>
+
+<pre>
+git add ex3.cpp
+git add numbers.txt
+git commit -m "lab 2 ex 3"
+git push
+</pre>
