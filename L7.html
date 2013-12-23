@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+<h1>Lab 7: Binary Search</h1>
+
+<h2>Learning Objectives</h2>
+
+<ul>
+<li>Learn how to perform a binary search.</li>
+<li>Understand the running time of binary search as a function of the vector size.</li>
+</ul>
+
+<h2>Assignment Folder</h2>
+
+<p>
+Create folder <em>~/201/lab_7</em> to contain the files
+you create for this lab.
+Follow the same file naming convention
+from earlier assignments.
+</p>
+
+<h2>Exercise 1: Binary search (10 points)</h2>
+
+<pre>
+bool contains(const vector&lt;int> &amp; v, int k);
+</pre>
+
+<p>
+Write a function called <code>contains</code> 
+that finds an occurrence of an integer <code>k</code> 
+in a vector <code>v</code> using binary search.
+The function signature is given above. 
+Write your own implementation of binary search;
+do not use the binary search function available in the C++ standard library through the algorithms header.
+</p>
+
+<p>
+Binary search assumes that the sequence of values 
+(stored in a vector in our case) 
+is either non-decreasing or non-increasing.
+Assume that the vector passed into <code>binarySearch</code> 
+is non-decreasing, which means that each value beyond the first 
+is either equal to or greater than the previous value.
+</p>
+
+<p>
+Binary search is a natural search technique 
+when the collection of items is stored in order.
+It is roughly the technique you would use 
+to look up the meaning of a word in a dictionary 
+or find a phone number in a telephone book.
+</p>
+
+<p>
+Write test code that thoroughly tests your function. 
+Express your tests using assertions.
+</p>
+
+<h2>Exercise 2: Running time of binary search (10 points)</h2>
+
+<p>
+Binary search is much more efficient that linear search.
+Imagine looking up a word in a dictionary by starting at page 1,
+then looking at page 2, then page 3 and so on. 
+For most words, the process takes significantly longer than a binary search. 
+</p>
+
+<p>
+If there are <em>n</em> items in the vector, 
+then in the worst case linear search will complete after <em>n</em> comparisons 
+with the value you are searching for.
+In contrast, binary search will complete after 
+<em>log<sub>2</sub>n + 1</em> comparisons in the worst case, 
+where <em>log<sub>2</sub>n</em> is the base 2 logarithm of <em>n</em>.
+</p>
+
+<p>
+Add code to your implementation of the <code>contains</code> function 
+that checks that the search completes within 
+<em>log<sub>2</sub>n + 1</em> iterations of its processing loop.
+Use the <code>assert</code> function to express this check as a requirement.
+</p>
+
+<p>
+Note: The mathematical function <em>log<sub>2</sub></em> 
+is available as <code>log2</code> if you include the header file &lt;cmath>.
+</p>
+
