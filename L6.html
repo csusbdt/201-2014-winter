@@ -1,0 +1,135 @@
+---
+layout: default
+---
+
+<h1>Lab 6: Arrays</h1>
+
+<h2>Learning Objectives</h2>
+
+<ul>
+<li>Learn how to use vectors and arrays.</li>
+<li>Learn how to write algorithms that perform sequential (linear) processing.</li>
+</ul>
+
+<h2>Assignment Folder</h2>
+
+<p>
+Create folder <em>~/201/lab_6</em> to contain the files
+you create for this lab.
+Follow the same file naming convention
+from earlier assignments.
+</p>
+
+<h2>Exercise 1: Finding the maximum value (5 points)</h2>
+
+<pre>
+int mymaximum(int a[], int numberOfElements);
+</pre>
+
+<p>
+Provide an implementation of the <code>mymaximum</code> function 
+whose declaration is shown above. 
+The first argument of the function is an array of int 
+and the second argument is the number of ints that are in the array.
+The function returns the largest int that is in the array. 
+</p>
+
+<p>
+Write test code that thoroughly tests the function.
+The test code should use assertions.
+</p>
+
+<h2>Exercise 2: Appending integers (5 points)</h2>
+
+<pre>
+void append(vector&lt;int> &amp; v, int n);
+</pre>
+
+<p>
+Provide an implementation of the function whose declaration is shown above.
+The first argument of the function is a vector of int 
+and the second argument is the number of consecutive integers 
+to append to the vector starting from 0 and ending at <code>n - 1</code>.
+The function appends onto the vector <code>v</code> the values 0, 1, 2, ..., n - 1.
+(Hint: use the <code>push_back</code> function of <code>vector</code> 
+to append these values to <code>v</code>.)  (5 points)
+</p>
+
+<p>
+Write test code that thoroughly tests the function.
+The test code should use assertions.
+</p>
+
+<h2>Exercise 3: Appending vectors (5 points)</h2>
+
+<pre>
+void appendVector(vector&lt;int> &amp; v, const vector&lt;int> &amp; w);
+</pre>
+
+<p>
+Provide an implementation of the <code>appendVector</code> function
+whose declaration is shown above.
+Both arguments of the function are vectors of int.
+The function should modify vector <code>v</code> 
+by appending to it all the elements of <code>w</code>.
+For example, if <em>v = (4, 2, 5)</em> 
+and <em>w = (11, 3)</em>, 
+then <code>v</code> will become <em>(4, 2, 5, 11, 3)</em>
+as a result of calling the function.
+Hint: the vector class has a function called <code>push_back</code> 
+that appends values passed into it.
+</p>
+
+<h2>Exercise 4: Vector insertion (5 points)</h2>
+
+<p>
+Suppose a vector <code>v</code> contains a sequence of integers 
+ordered from lowest to highest. 
+For example, <code>v</code> might contain the values 3, 6, 7, 12.
+Write a function called <code>insert</code> 
+that takes this vector <code>v</code> 
+as a first argument 
+and an integer <code>k</code> as the second argument.
+The function inserts <code>k</code> into the vector 
+so that it preserves the order of elements.
+For example, if <code>v</code> were (3, 6, 7, 12) 
+and <code>k</code> were 8, 
+then after calling the function, 
+<code>v</code> would be (3, 6, 7, 8, 12).
+In your implementation of <code>insert</code>, 
+do not use the insert function of the vector class (v.insert).
+</p>
+
+<p>
+Write test code that thoroughly tests the function.
+The test code should use assertions.
+</p>
+
+<h2>Exercise 5: Counting occurrences (5 points)</h2>
+
+<pre>
+int countOccurrences(const vector&lt;int> &amp; v, int k);
+</pre>
+
+<p>
+Implement the function <code>countOccurrences</code> 
+whose declaration appears above.
+The first argument of the function is a vector <code>v</code> of integers 
+and the second argument is an integer <code>k</code>. 
+The function returns the number of times <code>k</code> occurs in <code>v</code>.
+</p>
+
+<h2>Exercise 6: Two-dimensional arrays (5 points)</h2>
+
+<pre>
+bool isAllZeros(int a[50][100]);
+</pre>
+
+<p>
+Implement the function <code>isAllZeros</code> 
+that uses a loop nested inside another loop 
+to determine whether a 2-dimensional array contains only zeros.
+A declaration of the function is shown above.
+The array passed into the function will have 50 rows and 100 columns. 
+</p>
+
