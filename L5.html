@@ -1,0 +1,120 @@
+---
+layout: default
+---
+
+<h1>Lab 5: Classes</h1>
+
+<h2>Learning Objectives</h2>
+
+<ul>
+<li>Learn how to implement classes (user defined data types).</li>
+<li>Understand the concept of encapsulation (hiding internal details to make usage of a class more obvious).</li>
+<li>Understand how to implement and use accessor and mutator functions.</li>
+<li>Understand how to implement constructors.</li>
+<li>Understand how to overload member functions.</li>
+<li>Learn how to break the source code for a program into separate files (compilation units).</li>
+<li>Learn how to solve programming problems with classes.</li>
+</ul>
+
+<h2>Assignment Folder</h2>
+
+<p>
+Create folder <em>~/201/lab_5</em> to contain the files
+you create for this lab.
+Follow the same file naming convention
+from earlier assignments.
+</p>
+
+<h2>Exercise 1: A number class (10 points)</h2>
+
+<p>
+Develop a class called <code>Number</code> 
+that represents an integer value.
+The class should have a constructor 
+that takes the integer value as its only argument.
+The constructor should store this value in a private member variable.
+</p>
+
+<p>
+Define a public member function 
+called <code>isPrime</code> that takes no argument and returns a bool.
+If the number is a prime number, 
+then <code>isPrime</code> returns true, otherwise it returns false.
+</p>
+
+<p>
+Define another member function called <code>isDivisibleBy</code> 
+that takes a single integer argument and returns a bool.
+If the integer passed into <code>isDivisibleBy</code> is a divisor for the number, 
+then the function returns true, otherwise it returns false.
+</p>
+
+<p>
+Test your implementation of the Number class using the following test code.
+</p>
+
+<pre>
+#include &nbsp;iostream>
+#include &nbsp;cassert>
+#include "Number.h"
+
+using namespace std;
+
+int main(int argc, char * argv[])
+{
+    Number nine(9);
+    assert(!nine.isPrime());
+    assert( nine.isDivisibleBy(1));
+    assert(!nine.isDivisibleBy(2));
+    assert( nine.isDivisibleBy(3));
+    assert(!nine.isDivisibleBy(8));
+    assert( nine.isDivisibleBy(9));
+
+    Number seven(7);
+    assert( seven.isPrime());
+    assert( seven.isDivisibleBy(1));
+    assert(!seven.isDivisibleBy(2));
+    assert(!seven.isDivisibleBy(3));
+    assert( seven.isDivisibleBy(7));
+
+    Number seventySeven(77);
+    assert(!seventySeven.isPrime());
+
+    Number seventyThree(73);
+    assert(seventyThree.isPrime());
+
+    Number twentySeven(27);
+    assert(!twentySeven.isPrime());
+    assert(!twentySeven.isDivisibleBy(2));
+    assert(twentySeven.isDivisibleBy(3));
+    assert(twentySeven.isDivisibleBy(9));
+
+    cout &lt;&lt; "All tests passed.\n";
+    cin.get();  // Use if debugging program in Visual Studio.
+}
+</pre>
+
+<p>
+Your solution to this exercise should contain the following three files.
+</p>
+
+<dl>
+<dt>main.cpp<dt>    <dd>contains the test code given above</dd>
+<dt>Number.h</dt>   <dd>contains the <code>Number</code> class declaration</dd>
+<dt>Number.cpp</dt> <dd>contains the implementation of the constructor and <code>isPrime</code></dd>
+</dl>
+
+<p>
+Include a UML class diagram within a multi-line comment in <em>Number.h</em>.
+</p>
+
+<h2>Exercise 2: Listing prime numbers with the number class (10 points)</h2>
+
+<p>
+In exercises from 2 previous labs, 
+you developed programs that listed all the prime numbers 
+between 2 and a number entered by the user.
+In this exercise, you will write a program that also solves this problem; 
+however, you should use the number class that you developed in the previous exercise of this lab.
+</p>
+
