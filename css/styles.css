@@ -112,6 +112,10 @@ dl dd, dl dd p {
   font-style: italic;
 }
 
+.callout em {
+  font-weight: bold;
+}
+
 button {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
