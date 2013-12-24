@@ -14,7 +14,7 @@
     ['L7',  20, new Date(2014,  2,  3), '<a href="L7.html">L7: Binary Search</a>'],
     ['A3',  50, new Date(2014,  1, 19), '<a href="A3.pdf">A3: Algorithms 2</a>'],
     ['Q3', 200, new Date(2014,  1, 23), 'Quiz 3'],
-    ['L8',  20, new Date(2014,  2,  3), '<a href="L8.html">L8: Sorting</a>'],
+    ['L8',  30, new Date(2014,  2,  3), '<a href="L8.html">L8: Sorting</a>'],
     ['F' , 400, new Date(2014,  1, 23), 'Final Exam']
   ];
 

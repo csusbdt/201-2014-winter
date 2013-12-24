@@ -116,8 +116,9 @@ which equals <em>(n<sup>2</sup> - n) / 2</em>.
 <p>
 Because  
   <blockquote><em>
-    n = n * 2 / 2 <br>
-    &lt; n * n / 2 <br>
+    n <br>
+    = n &middot; 2 / 2 <br>
+    &lt; n &middot; n / 2 <br>
     = n<sup>2</sup> / 2
   </em></blockquote>
 we have that
@@ -127,26 +128,33 @@ we have that
     = (n<sup>2</sup> / 2) / 2 <br>
     = n<sup>2</sup> / 4.
   </em></blockquote>
+In summary,
+  <blockquote><em>
+    (n<sup>2</sup> - n) / 2 &lt; 1/4 &middot; n<sup>2</sup>
+  </em></blockquote>
 </p>
 
 <p>
 From this, you can see that the running time of Loop B is <em>bounded below</em>
 by a constant multiple of <em>n<sup>2</sup></em>,
 which places it in the category of an <em>n<sup>2</sup></em> running time algorithm,
-which is also referred to as <em>quadratic time</em>.
+which is also referred to as a <em>quadratic time algorithm</em>.
 </p>
 
 <p>
 Your sorting algorithm probably has a structure that resembles Loop B.
-In this exercise, you will verify that your solting algorthim
+In this exercise, you will verify that your sorting algorthim
 runs in quadratic time.
 </p>
 
 <p>
-In <em>ex2.cpp</em>, add code to your sort algorithm that counts the number of times
-the inner loop is executed for vectors of various sizes.
-The count may become too large to fit into an int.
-For this reason, you should declare this variable as type <code>long</code> as follows.
+Create file <em>ex2.cpp</em> that includes your sort function <code>mysort</code>
+and a main function that creates vectors of various sizes and passes them into
+<code>mysort</code>.
+Add code to <code>mysort</code> to count the number of times
+the inner loop is executed.
+This count may become too large to fit into an int,
+so declare this variable as type <code>long</code> as follows.
 </p>
 
 <pre>
@@ -154,7 +162,7 @@ long innerLoopCount = 0;
 </pre>
 
 <p class="callout">
-In C++ programs, the largest possible value for an int is 
+In C++ programs, the largest possible value for an <code>int</code> is 
 stored in a predefined variable named <code>INT_MAX</code>,
 which is a little more than 2 billion.
 </p>
@@ -168,8 +176,9 @@ integers that are generated from the <code>rand</code> function.
 </p>
 
 <p>
-Produce a scatter plot of your measurements,
-placing vector size on the X-axis and the loop executions on the Y-axis. 
+Produce a scatter plot that shows the relationship between vector size
+and the number of times the inner loop executes.
+Place vector size on the X-axis and loop executions on the Y-axis. 
 The points in your scatter plot should 
 approximate a quadric curve.
 </p>
