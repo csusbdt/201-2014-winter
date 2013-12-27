@@ -31,15 +31,15 @@
       td.innerHTML = schedule[i][3];
       td.className = 'activity';
       tr.appendChild(td);
-      td = document.createElement('td'); // deadline
+      td = document.createElement('td'); // deadline column
       td.innerHTML = app.extractDate(schedule[i][2]);
       td.className = 'deadline';
       tr.appendChild(td);
-      td = document.createElement('td'); // points
+      td = document.createElement('td'); // points column
       td.innerHTML = schedule[i][1];
       td.className = 'points';
       tr.appendChild(td);
-      td = document.createElement('td'); // score
+      td = document.createElement('td'); // score column
       td.innerHTML = '';
       td.className = 'score';
       tr.appendChild(td);
