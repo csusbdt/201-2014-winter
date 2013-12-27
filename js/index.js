@@ -82,7 +82,7 @@
           ++n;
         }
       }
-      if (n > 0) avgs.push(total/n);
+      if (n > 0) avgs.push(Math.round(total/n));
       else avgs.push(null);
     }  
     app.scores.Avg = avgs;
