@@ -1,0 +1,285 @@
+---
+layout: default
+---
+
+<h1>Quiz 1</h1>
+
+<h2>Work Covered</h2>
+
+<ul>
+<li>Lab 2: Expressions</li>
+<li>Assignment 1: Analyzing Code</li>
+</ul>
+
+<h2>Practice Problems</h2>
+
+<p>
+The following problems appeared on Quiz 1 in previous years.
+</p>
+
+<pre>
+int i = 6;
+while (i &lt; 66)
+{
+  cout &lt;&lt; i - 6 &lt;&lt; " ";
+   i = 6 * i;
+}
+</pre>
+<p class="figure">Figure 1</p>
+<p class="question">
+1) When the code in Figure 1 runs, what does it output to the console? 
+</p>
+<pre class="answer">
+0  30
+</pre>
+
+<p class="question">
+2) Suppose that t is an integer variable. 
+Write code that prints "cold" when t is less than or equal to 50, 
+and “hot” when t is greater than 50. 
+</p>
+<pre class="answer">
+if (t &lt;= 50)
+{
+   cout &lt;&lt; "cold";
+} 
+else 
+{
+   cout &lt;&lt; "hot";
+}
+</pre>
+
+<pre>
+int k = 222;
+int n = -4;
+for (int i = 0; i &lt; k; ++i)
+{
+   n = n + 2;
+}
+cout &lt;&lt; n;
+</pre>
+<p class="figure">Figure 2</p>
+<p class="question">
+3) When the code in Figure 2 runs, what does it print?
+</p>
+<pre class="answer">
+440
+</pre>
+
+<pre>
+int n = 9;
+int k = (1 + n++) * 2; 
+cout &lt;&lt; (n + ++k) % 3; 
+</pre>
+<p class="figure">Figure 3</p>
+<p class="question">
+4) When the code in Figure 3 runs, what does it output to the console?
+</p>
+<pre class="answer">
+1
+</pre>
+
+<pre>
+int i = 2;
+int k = 6;
+while (i &lt; 333)
+{
+   k = k - 1;
+   i = i * 2;
+}
+cout &lt;&lt; k;
+</pre>
+<p class="figure">Figure 4</p>
+<p class="question">
+5) When the code in Figure 4 runs, what does it output to the console?
+</p>
+<pre class="answer">
+-2
+</pre>
+
+<pre>
+int x = 1;
+double y = 2;
+if (x / y != 0) {
+   cout &lt;&lt; "nonzero";
+} else {
+   cout &lt;&lt; "zero";
+}
+</pre>
+<p class="figure">Figure 5</p>
+<p class="question">
+6) When the code in Figure 5 runs, what does it output to the console?
+</p>
+<pre class="answer">
+nonzero
+</pre>
+
+<pre>
+int i = 4;
+for (int k = 0; k &lt; 500; ++k)
+{
+   i = i + 3;
+}
+cout &lt;&lt; i;
+</pre>
+<p class="figure">Figure 6</p>
+<p class="question">
+7) When the code in Figure 6 runs, what does it output to the console? 
+</p>
+<pre class="answer">
+1504
+</pre>
+
+<p class="question">
+8) Write code that uses a for loop or a while loop 
+to compute the sum of even integers between 100 and 1000, inclusive.
+</p>
+<pre class="answer">
+int sum = 0;
+for (int i = 100; i &lt;= 1000; i = i + 2)
+{
+   sum = sum + i;
+}
+</pre>
+
+<p class="question">
+9) Write C++ code that prints all the multiples of 3 between 1 and 1000. 
+So it would print 3, 6, 9, 12, ..., 996, 999. 
+</p>
+<pre class="answer">
+for (int i = 3; i &lt;= 999; i = i + 3)
+{
+   cout &lt;&lt; i;
+}
+</pre>
+
+<p class="question">
+10) Write C++ code that prints 100 random integers, 
+where each integer is between 0 and 99, inclusive. 
+Hint: use the rand function with the modulo operator (%).
+</p>
+<pre class="answer">
+for (int i = 0; i &lt; 100; ++i)
+{
+   cout &lt;&lt; rand() % 100;
+}
+</pre>
+
+<h2>Additional Practice Problems</h2>
+
+<pre>
+int i = 1;
+while (i &lt; 128)
+{
+    cout &lt;&lt; i + 1 &lt;&lt; " ";
+    i = 2 * i;
+}
+</pre>
+
+<div class="figure">Figure 1</div>
+
+<p class="question">
+1) When the code in Figure 1 runs, what does it output to the console?
+</p>
+
+<p class="question">
+2) Suppose that k is an integer variable.
+Write code that prints "good" when k is either positive or equal to -1, 
+and "bad" otherwise.
+</p>
+
+<pre>
+int k = 901;
+int n = 0;
+for (int i = 0; i &lt; k; ++i)
+{
+    n = n + 1;
+}
+cout &lt;&lt; n;
+</pre>
+
+<div class="figure">Figure 2</div>
+
+<p class="question">
+3) When the code in Figure 2 runs, what does it print?
+</p>
+
+<pre>
+ int n = -1;
+ int k = n++ * 2;
+ cout &lt;&lt; (++n * 16 + k) % 4;
+</pre>
+
+<div class="figure">Figure 3</div>
+
+<p class="question">
+4) When the code in Figure 3 runs, what does it output to the console?
+</p>
+
+<pre>
+int i = -1;
+while (i &lt;= 999)
+{
+    i = i + 200;
+}
+cout &lt;&lt; i;
+</pre>
+
+<div class="figure">Figure 4</div>
+
+<p class="question">
+5) When the code in Figure 4 runs, what does it output to the console?
+</p>
+
+<pre>
+int i = 1;
+int j = 2;
+double x = 1.0;
+if (i / j > 0)
+{
+    cout &lt;&lt; "alpha";
+}
+if (x / j > 0)
+{
+    cout &lt;&lt; "beta";
+}
+</pre>
+
+<div class="figure">Figure 5</div>
+
+<p class="question">
+6) When the code in Figure 5 runs, what does it output to the console?
+</p>
+
+<pre>
+int i = 2;
+for (int k = 0; k &lt; 500; ++k)
+{
+    i = i + 2;
+}
+cout &lt;&lt; i;
+</pre>
+
+<div class="figure">Figure 6</div>
+
+<p class="question">
+7) When the code in Figure 6 runs, what does it output to the console?
+</p>
+
+<p class="question">
+8) Write code that computes the sum of integers 100 through n, inclusive, 
+where n is an integer strictly greater than 100.
+</p>
+
+<p class="question">
+9) Write C++ code that prints every odd number between 100 and 1000. 
+</p>
+
+<p class="question">
+10) Write C++ code that prints 100 random integers, 
+where each integer is between 0 and 99, inclusive.  
+Hint: use the rand function with the modulo operator (%).  
+</p>
+
+<script src="js/quiz.js"></script>
+

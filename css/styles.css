@@ -116,6 +116,25 @@ dl dd, dl dd p {
   font-weight: bold;
 }
 
+.figure {
+  margin-top: -.5em;
+  padding-top: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+.question {
+}
+
+.answer {
+  display: none;
+}
+
+.answer-btn {
+  margin-bottom: 6em;
+}
+
 button {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;

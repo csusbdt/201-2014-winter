@@ -89,6 +89,8 @@ For each execution of the outer loop,
 the inner loop runs <em>n</em> times.
 So, the total number of times the core logic executes is 
 <em>n<sup>2</sup></em>.
+This places Loop A in the category of an <em>n<sup>2</sup></em> running time algorithm,
+which is also referred to as a <em>quadratic time algorithm</em>.
 </p>
 
 <p>
@@ -115,31 +117,42 @@ which equals <em>(n<sup>2</sup> - n) / 2</em>.
 </p>
 
 <p>
-Because  
-  <blockquote><em>
-    n <br>
-    = n &middot; 2 / 2 <br>
-    &lt; n &middot; n / 2 <br>
-    = n<sup>2</sup> / 2
-  </em></blockquote>
-we have that
-  <blockquote><em>
-    (n<sup>2</sup> - n) / 2 <br>
-    > (n<sup>2</sup> - n<sup>2</sup> / 2) / 2 <br>
-    = (n<sup>2</sup> / 2) / 2 <br>
-    = n<sup>2</sup> / 4.
-  </em></blockquote>
-In summary,
-  <blockquote><em>
-    (n<sup>2</sup> - n) / 2 &lt; 1/4 &middot; n<sup>2</sup>
-  </em></blockquote>
+For <em>n > 2</em>, we have the following.
 </p>
 
+<blockquote><em>
+  1/4 &middot; n<sup>2</sup> &lt; (n<sup>2</sup> - n) / 2 &lt; 1/2 &middot; n<sup>2</sup>
+</em></blockquote>
+
 <p>
-From this, you can see that the running time of Loop B is <em>bounded below</em>
-by a constant multiple of <em>n<sup>2</sup></em>,
-which places it in the category of an <em>n<sup>2</sup></em> running time algorithm,
-which is also referred to as a <em>quadratic time algorithm</em>.
+The first inequality can be demonstrated by the following.
+</p>
+
+<blockquote><em>
+  1/4 &middot; n<sup>2</sup> = <br>
+  (n<sup>2</sup> / 2) / 2 = <br>
+  (n<sup>2</sup> - n<sup>2</sup> / 2) / 2 &lt; <br>
+  (n<sup>2</sup> - n) / 2
+</em></blockquote>
+
+<p>
+The second inequality can be demonstrated by the following.
+</p>
+
+<blockquote><em>
+  (n<sup>2</sup> - n) / 2 = <br>
+  1/2 &middot; n<sup>2</sup> - 1/2 &middot; n &lt; <br>
+  1/2 &middot; n<sup>2</sup> 
+</em></blockquote>
+
+<p>
+From this, you can see that the running time of Loop B is bounded below
+by a constant multiple of <em>n<sup>2</sup></em> and
+similarly bounded above by a constant multiple of <em>n<sup>2</sup></em>
+for <em>n > 2</em>.
+This property places Loop B in the category of an <em>n<sup>2</sup></em> running time algorithm.
+Loops A and B are both considered to have <em>n<sup>2</sup></em> running times
+even though loop A runs more times than loop B.
 </p>
 
 <p>
