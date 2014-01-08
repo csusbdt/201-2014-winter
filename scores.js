@@ -47,7 +47,7 @@ app.scores.tt = [ null, null, null, null, null, null, null, null, null, null, nu
 app.scores.4m = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.8k = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.9z = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
-app.scores.4e = [ 20, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
+app.scores.4e = [ 20,   null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.z5 = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.pb = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.vp = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
@@ -59,6 +59,5 @@ app.scores.ut = [ null, null, null, null, null, null, null, null, null, null, nu
 app.scores.k9 = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.i3 = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.pm = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
-app.scores.8s = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.onloadScores();
 
