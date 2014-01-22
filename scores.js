@@ -64,7 +64,7 @@ app.scores.wf = [ 20,   null, null, null, null, null, null, null, null, null, nu
 app.scores.ss = [ 20,   null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.ut = [ 20,   null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.k9 = [ 20,   null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
-app.scores.i3 = [ 20,   null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
+app.scores.i3 = [ 20,   30,   null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.pm = [ 20,   null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.onloadScores();
 
