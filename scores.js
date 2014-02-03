@@ -9,7 +9,7 @@ app.scores.wf = [ 20,   30,   20,   80,   null, null, null, null, null, null, nu
 app.scores.sa = [ 20,   20,   24,   95,   null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.z9 = [ 20,   30,   47,   138,  null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.kf = [ 20,   30,   13,   50,   null, null, null, null, null, null, null, null, null, null, null, null ];
-app.scores.d9 = [ 20,   30,   50,   177,  null, null, null, null, null, null, null, null, null, null, null, null ];
+app.scores.d9 = [ 20,   30,   50,   182,  null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.h4 = [ 0,    0,    41,   165,  null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.g5 = [ 20,   10,   20,   80,   null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.k9 = [ 20,   30,   17,   68,   null, null, null, null, null, null, null, null, null, null, null, null ];
@@ -54,7 +54,7 @@ app.scores.j3 = [ 20,   30,   44,   177,  null, null, null, null, null, null, nu
 app.scores.i3 = [ 20,   30,   50,   182,  null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.gk = [ 20,   30,   38,   150,  null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.yt = [ 20,   30,   39,   90,   null, null, null, null, null, null, null, null, null, null, null, null ];
-app.scores.ss = [ 20,   20,   13,   50,   null, null, null, null, null, null, null, null, null, null, null, null ];
+app.scores.ss = [ 20,   30,   13,   50,   null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.ph = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.scores.vb = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.onloadScores();
