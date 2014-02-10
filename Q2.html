@@ -24,7 +24,7 @@ public:
     SchoolBus(int seats, int seatedStudents);
     bool addStudents(int students);
     bool removeStudents(int students);
-    int getStudents();
+    int getStudents() const;
 
 private:
     int seats;
@@ -73,18 +73,30 @@ which returns the total number of students seated in the bus.
 2) Provide an implementation of the SchoolBus constructor. 
 </p>
 <pre class="answer">
+SchoolBus(int seats, int seatedStudents) {
+   this->seats = seats;
+   this->seatedStudents = seatedStudents;
+}
 </pre>
 
 <p class="question">
 3) Provide an implementation of the getStudents function.
 </p>
 <pre class="answer">
+int getStudents() const {
+   return seatedStudents;
+}
 </pre>
 
 <p class="question">
 4) Provide an implementation of the addStudents function.
 </p>
 <pre class="answer">
+
+
+
+
+
 </pre>
 
 <p class="question">
