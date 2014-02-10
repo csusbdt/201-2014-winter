@@ -92,11 +92,14 @@ int getStudents() const {
 4) Provide an implementation of the addStudents function.
 </p>
 <pre class="answer">
-
-
-
-
-
+bool addStudents(int students) {
+   if (seatedStudents + students > seats) {
+      return false;
+   } else {
+      this->seatedStudents += students;
+      return true;
+   }
+}
 </pre>
 
 <p class="question">
