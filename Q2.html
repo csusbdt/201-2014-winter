@@ -106,6 +106,14 @@ bool addStudents(int students) {
 5) Provide an implementation of the removeStudents function.
 </p>
 <pre class="answer">
+bool removeStudents(int students) {
+   if (students > seatedStudents) {
+      return false;
+   } else {
+      seatedStudents -= students;
+      return true;
+   }
+}
 </pre>
 
 <p class="question">
