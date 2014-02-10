@@ -132,9 +132,6 @@ assert(bus.getStudents() == 9);
 7) Provide an alternative implementation of the addStudents function that sets the number of students seated in the bus to its maximum when the added students exceed the available capacity.  The function should continue to return false in this case.
 </p>
 <pre class="answer">
-
-
-
 bool addStudents(int students) {
    if (seatedStudents + students > seats) {
       seatedStudents = seats;
@@ -144,22 +141,35 @@ bool addStudents(int students) {
       return true;
    }
 }
-
-
 </pre>
 
 <p class="question">
 8) Provide an alternative implementation of the removeStudents function that sets the number of students seated on the bus to zero when asked to remove more students than are already seated.  The function should continue to return false in this case.
 </p>
 <pre class="answer">
+bool removeStudents(int students) {
+   if (students > seatedStudents) {
+      seatedStudents = 0;
+      return false;
+   } else {
+      seatedStudents -= students;
+      return true;
+   }
+}
 </pre>
 
 <p class="question">
-9) Provide test code for the removeStudents function you implemented in problem 7. 
+9) Provide test code for the addStudents function you implemented in problem 7. 
 Use assert statements for this purpose. 
 Make sure the test code executes all lines of code in the function. 
 </p>
 <pre class="answer">
+SchoolBus bus(10, 5);
+assert(bus.getStudents() == 5);
+assert(bus.addStudents(4) == true);
+assert(bus.getStudents() == 9);
+assert(bus.addStudents(3) == false);
+assert(bus.getStudents() == 10);
 </pre>
 
 <script src="js/quiz.js"></script>
