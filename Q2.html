@@ -120,6 +120,12 @@ bool removeStudents(int students) {
 6) Provide test code for the addStudents function you implemented in problem 3. Use assert statements for this purpose. Make sure the test code executes all lines of code in the function.
 </p>
 <pre class="answer">
+SchoolBus bus(10, 5);
+assert(bus.getStudents() == 5);
+assert(bus.addStudents(4) == true);
+assert(bus.getStudents() == 9);
+assert(bus.addStudents(3) == false);
+assert(bus.getStudents() == 9);
 </pre>
 
 <p class="question">
