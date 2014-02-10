@@ -132,6 +132,20 @@ assert(bus.getStudents() == 9);
 7) Provide an alternative implementation of the addStudents function that sets the number of students seated in the bus to its maximum when the added students exceed the available capacity.  The function should continue to return false in this case.
 </p>
 <pre class="answer">
+
+
+
+bool addStudents(int students) {
+   if (seatedStudents + students > seats) {
+      seatedStudents = seats;
+      return false;
+   } else {
+      this->seatedStudents += students;
+      return true;
+   }
+}
+
+
 </pre>
 
 <p class="question">
