@@ -1,0 +1,123 @@
+---
+layout: default
+---
+
+<h1>Quiz 2</h1>
+
+<h2>Work Covered</h2>
+
+<ul>
+<li>Labs 1 through 5</li>
+<li>Assignments 1 and 2</li>
+</ul>
+
+<h2>Practice Problems</h2>
+
+<p>
+The following problems appeared on Quiz 2 in previous years.
+</p>
+
+<pre>
+class SchoolBus
+{
+public:
+    SchoolBus(int seats, int seatedStudents);
+    bool addStudents(int students);
+    bool removeStudents(int students);
+    int getStudents();
+
+private:
+    int seats;
+    int seatedStudents;
+};
+</pre>
+<p class="figure">Figure 1</p>
+
+<p>
+The declaration for the SchoolBus class is shown in Figure 1.
+Instances of the SchoolBus class represent school buses of varying
+sizes. The class provides functions to add and remove students.
+The add and remove functions return false and do not modify 
+the state of the object if the operation can not be done exactly as requested. 
+For example, if there are 3 empty seats and you try to add 5 students, 
+then the addStudents function returns false 
+and does not change the number of seated students. 
+There is a single accessor function called getSeatedStudents, 
+which returns the total number of students seated in the bus.
+</p>
+
+<p class="question">
+1) Draw the UML class diagram for the SchoolBus class given in Figure 1. 
+</p>
+<pre class="answer">
++----------------------------------------------------------------+
+|                                                                |
+|                           SchoolBus                            |
+|                                                                |
++----------------------------------------------------------------+
+|                                                                |
+| - seats : int                                                  |
+| - seatedStudents : int                                         |
+|                                                                |
++----------------------------------------------------------------+
+|                                                                |
+| + SchoolBus(seats : int, seatedStudents : int)                 |
+| + addStudents(students : int) : bool                           |
+| + removeStudents(students : int) : bool                        |
+| + getStudents() : int                                          |
+|                                                                |
++----------------------------------------------------------------+
+</pre>
+
+<p class="question">
+2) Provide an implementation of the SchoolBus constructor. 
+</p>
+<pre class="answer">
+</pre>
+
+<p class="question">
+3) Provide an implementation of the getStudents function.
+</p>
+<pre class="answer">
+</pre>
+
+<p class="question">
+4) Provide an implementation of the addStudents function.
+</p>
+<pre class="answer">
+</pre>
+
+<p class="question">
+5) Provide an implementation of the removeStudents function.
+</p>
+<pre class="answer">
+</pre>
+
+<p class="question">
+6) Provide test code for the addStudents function you implemented in problem 3. Use assert statements for this purpose. Make sure the test code executes all lines of code in the function.
+</p>
+<pre class="answer">
+</pre>
+
+<p class="question">
+7) Provide an alternative implementation of the addStudents function that sets the number of students seated in the bus to its maximum when the added students exceed the available capacity.  The function should continue to return false in this case.
+</p>
+<pre class="answer">
+</pre>
+
+<p class="question">
+8) Provide an alternative implementation of the removeStudents function that sets the number of students seated on the bus to zero when asked to remove more students than are already seated.  The function should continue to return false in this case.
+</p>
+<pre class="answer">
+</pre>
+
+<p class="question">
+9) Provide test code for the removeStudents function you implemented in problem 7. 
+Use assert statements for this purpose. 
+Make sure the test code executes all lines of code in the function. 
+</p>
+<pre class="answer">
+</pre>
+
+<script src="js/quiz.js"></script>
+

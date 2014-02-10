@@ -11,7 +11,7 @@
     ['L4',  30, new Date('2014-02-06T23:59:59'), '<a href="L4.html">L4: Functions</a>'],
     ['L5',  20, new Date('2014-02-13T23:59:59'), '<a href="L5.html">L5: Classes</a>'],
     ['A2',  55, new Date('2014-02-16T23:59:59'), '<a href="A2.pdf">A2: Classes</a>'],
-    ['Q2', 200, new Date('2014-02-19T23:59:59'), 'Quiz 2'],
+    ['Q2', 200, new Date('2014-02-19T23:59:59'), '<a href="Q2.html">Quiz 2</a>'],
     ['L6',  30, new Date('2014-02-27T23:59:59'), '<a href="L6.html">L6: Arrays</a>'],
     ['A3',  50, new Date('2014-03-02T23:59:59'), '<a href="A3.pdf">A3: Algorithms 2</a>'],
     ['L7',  20, new Date('2014-03-06T23:59:59'), '<a href="L7.html">L7: Binary Search</a>'],
