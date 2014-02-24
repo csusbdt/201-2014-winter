@@ -1,7 +1,7 @@
 app.scores = {};//  L1    L2    A1    Q1    L3    L4    L5    A2    Q2    L6    A3    L7    A4    Q3    L7     F
 app.scores.mw = [ 20,   30,   48,   193,  40,   30,   null, 34,   200,  null, null, null, null, null, null, null ];
 app.scores.cc = [ 20,   30,   25,   98,   40,   30,   null, 27,   179,  null, null, null, null, null, null, null ];
-app.scores.tr = [ 20,   30,   50,   110,  40,   30,   null, 0,    149,  null, null, null, null, null, null, null ];
+app.scores.tr = [ 20,   30,   50,   110,  40,   30,   null, 0,    175,  null, null, null, null, null, null, null ];
 app.scores.n7 = [ 20,   30,   43,   173,  40,   30,   null, 45,   175,  null, null, null, null, null, null, null ];
 app.scores.ut = [ 20,   30,   40,   160,  38,   30,   null, 43,   200,  null, null, null, null, null, null, null ];
 app.scores.nn = [ 20,   0,    16,   65,   0,    0,    null, 0,    null, null, null, null, null, null, null, null ];
