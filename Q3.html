@@ -1,0 +1,107 @@
+---
+layout: default
+---
+
+<h1>Quiz 3</h1>
+
+<h2>Work Covered</h2>
+
+<ul>
+<li>Labs 3, 4, 6, 7</li>
+<li>Assignment 3</li>
+</ul>
+
+<h2>Practice Problems</h2>
+
+<p>
+The following problems appeared on Quiz 3 in previous years.
+</p>
+
+<pre>
+bool areIdentical(const vector<int> & a, const vector<int> & b);
+</pre>
+<p class="figure">Figure 1</p>
+
+<p class="question">
+1) 
+Write a predicate function that checks whether two vectors are identical (contain exactly the same elements in the same order).  A declaration of the function is shown in Figure 1.  The function returns true if the two vectors are identical; otherwise it returns false.
+</p>
+<pre class="answer">
+</pre>
+
+<pre>
+bool isUnlucky(vector<int> & v);
+</pre>
+<p class="figure">Figure 2</p>
+
+<p class="question">
+2) 
+Implement a function that determines if the unlucky number 13 appears in a vector.  The function returns true if 13 appears in the vector at least once; otherwise it returns false.  A declaration of the function is shown in Figure 2.
+</p>
+<pre class="answer">
+</pre>
+
+<p class="question">
+3) Write test code that tests every statement in the isUnlucky function you implemented in the previous problem. Express your tests using assertions. 
+</p>
+<pre class="answer">
+</pre>
+
+<pre>
+bool isStrictlyIncreasing(const vector<int> & v);
+</pre>
+<p class="figure">Figure 3</p>
+
+<p class="question">
+4) Write a predicate function called isStrictlyIncreasing that checks whether a vector of integers contains values that are in strictly increasing order. A declaration of the function is shown in Figure 3. The function returns true if the elements are in strictly increasing order; otherwise it returns false. For example, it will return true for v = (-2, 4, 5, 6, 8) and it will return false for 
+(3, 4, 6, 6, 9).
+</p>
+<pre class="answer">
+</pre>
+
+<pre>
+vector<int> flatten(int a[100][200]);
+</pre>
+<p class="figure">Figure 4</p>
+
+<p class="question">
+5) Write a function named flatten that takes a 2-dimensional array of integers with 100 rows and 200 columns and returns a vector that contains all of the array’s elements.  Copy the values a row at a time.  In other words, first copy row 0 into the vector, then row 1, then row 2, and so on. The declaration of flatten is given in Figure 4.
+</p>
+<pre class="answer">
+</pre>
+
+<pre>
+double findMax(double a[ROWS][COLS]);
+</pre>
+<p class="figure">Figure 5</p>
+
+<p class="question">
+6) Implement a function called findMax that determines the maximum value in a 2-dimensional array. A declaration of the function is shown in Figure 5.  The variables ROWS and COLS are constants defined elsewhere in the program; you don’t need to define them, just use them.
+</p>
+<pre class="answer">
+</pre>
+
+<pre>
+int search(const vector<int> & v, int k);
+</pre>
+<p class="figure">Figure 6</p>
+
+<p class="question">
+7) Implement a function that searches for a given value in a vector of integers.  If the value is found, the function returns the index of the value in the vector; otherwise it returns -1.  Do not assume the values are in order; do not use binary search. For example, for v = (-2, 4, 18, 6, -10) and k=1, the function returns -1, and for k = 4 it returns 1.   A declaration of the function is shown in Figure 6.
+</p>
+<pre class="answer">
+</pre>
+
+<pre>
+int binarySearch(const vector<int> & v, int k);
+</pre>
+<p class="figure">Figure 7</p>
+
+<p class="question">
+8) Implement a function that uses binary search to search for a given value in a vector of integers whose elements are in strictly increasing order.  If the value is found, the function returns the index of the value in the vector; otherwise, it returns -1.  You can assume that the values passed into the function are in strictly increasing order. For example, for v = (-2, 4, 5, 6, 8) and k=1, the function returns -1, and for k = 4 it returns 1.   A declaration of the function is shown in Figure 7.
+</p>
+<pre class="answer">
+</pre>
+
+<script src="js/quiz.js"></script>
+
