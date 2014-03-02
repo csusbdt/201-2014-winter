@@ -27,6 +27,11 @@ bool areIdentical(const vector<int> & a, const vector<int> & b);
 Write a predicate function that checks whether two vectors are identical (contain exactly the same elements in the same order).  A declaration of the function is shown in Figure 1.  The function returns true if the two vectors are identical; otherwise it returns false.
 </p>
 <pre class="answer">
+if (a.size() != b.size()) return false;
+for (int i = 0; i < a.size(); ++i) {
+    if (a[i] != b[i]) return false;
+}
+return true;
 </pre>
 
 <pre>
@@ -36,15 +41,27 @@ bool isUnlucky(vector<int> & v);
 
 <p class="question">
 2) 
-Implement a function that determines if the unlucky number 13 appears in a vector.  The function returns true if 13 appears in the vector at least once; otherwise it returns false.  A declaration of the function is shown in Figure 2.
+Implement a function that determines if the unlucky number 13 appears in a vector.  
+The function returns true if 13 appears in the vector at least once; otherwise it returns false. 
+A declaration of the function is shown in Figure 2.
 </p>
 <pre class="answer">
+for (int i = 0; i < a.size(); ++i) {
+    if (a[i] == 13) return true;
+}
+return false;
 </pre>
 
 <p class="question">
-3) Write test code that tests every statement in the isUnlucky function you implemented in the previous problem. Express your tests using assertions. 
+3) Write test code that tests every statement in the isUnlucky function 
+you implemented in the previous problem. Express your tests using assertions. 
 </p>
 <pre class="answer">
+vector<int> v;
+v.push_back(1);
+assert(isUnlucky(v) == false);
+v.push_back(13);
+assert(isUnlucky(v) == true);
 </pre>
 
 <pre>
@@ -53,10 +70,20 @@ bool isStrictlyIncreasing(const vector<int> & v);
 <p class="figure">Figure 3</p>
 
 <p class="question">
-4) Write a predicate function called isStrictlyIncreasing that checks whether a vector of integers contains values that are in strictly increasing order. A declaration of the function is shown in Figure 3. The function returns true if the elements are in strictly increasing order; otherwise it returns false. For example, it will return true for v = (-2, 4, 5, 6, 8) and it will return false for 
-(3, 4, 6, 6, 9).
+4) Write a predicate function called isStrictlyIncreasing 
+that checks whether a vector of integers contains values 
+that are in strictly increasing order. 
+A declaration of the function is shown in Figure 3. 
+The function returns true if the elements are in strictly increasing order; 
+otherwise it returns false. 
+For example, it will return true for v = (-2, 4, 5, 6, 8) 
+and it will return false for v = (3, 4, 6, 6, 9).
 </p>
 <pre class="answer">
+for (int i = 0; i < v.size() - 1; ++i) {
+    if (v[i] >= v[i + 1]) return false;
+}
+return true;
 </pre>
 
 <pre>
@@ -68,6 +95,13 @@ vector<int> flatten(int a[100][200]);
 5) Write a function named flatten that takes a 2-dimensional array of integers with 100 rows and 200 columns and returns a vector that contains all of the array’s elements.  Copy the values a row at a time.  In other words, first copy row 0 into the vector, then row 1, then row 2, and so on. The declaration of flatten is given in Figure 4.
 </p>
 <pre class="answer">
+vector<int> v;
+for (int i = 0; i < 100; ++i) {
+    for (int j = 0; j < 200; ++j) {
+        v.push_pack(v[i][j]);
+    }
+}
+return v;
 </pre>
 
 <pre>
@@ -79,6 +113,13 @@ double findMax(double a[ROWS][COLS]);
 6) Implement a function called findMax that determines the maximum value in a 2-dimensional array. A declaration of the function is shown in Figure 5.  The variables ROWS and COLS are constants defined elsewhere in the program; you don’t need to define them, just use them.
 </p>
 <pre class="answer">
+int max = a[0][0];
+for (int i = 0; i < ROWS; ++i) {
+    for (int j = 0; j < COLS; ++j) {
+        if (a[i][j] > max) max = a[i][j];
+    }
+}
+return max;
 </pre>
 
 <pre>
@@ -90,6 +131,10 @@ int search(const vector<int> & v, int k);
 7) Implement a function that searches for a given value in a vector of integers.  If the value is found, the function returns the index of the value in the vector; otherwise it returns -1.  Do not assume the values are in order; do not use binary search. For example, for v = (-2, 4, 18, 6, -10) and k=1, the function returns -1, and for k = 4 it returns 1.   A declaration of the function is shown in Figure 6.
 </p>
 <pre class="answer">
+for (int i = 0; i < v.size(); ++i) {
+    if (v[i] == k) return true;
+}
+return false;
 </pre>
 
 <pre>
@@ -98,9 +143,29 @@ int binarySearch(const vector<int> & v, int k);
 <p class="figure">Figure 7</p>
 
 <p class="question">
-8) Implement a function that uses binary search to search for a given value in a vector of integers whose elements are in strictly increasing order.  If the value is found, the function returns the index of the value in the vector; otherwise, it returns -1.  You can assume that the values passed into the function are in strictly increasing order. For example, for v = (-2, 4, 5, 6, 8) and k=1, the function returns -1, and for k = 4 it returns 1.   A declaration of the function is shown in Figure 7.
+8) Implement a function that uses binary search to search for a given value 
+in a vector of integers whose elements are in strictly increasing order. 
+If the value is found, the function returns the index of the value in the vector; 
+otherwise, it returns -1. 
+You can assume that the values passed into the function are in strictly increasing order. 
+For example, for v = (-2, 4, 5, 6, 8)
+the function returns -1 for k = 3 and 1 for k = 4.
+A declaration of the function is shown in Figure 7.
 </p>
+
 <pre class="answer">
+int binarySearch(vector<int> v, int k)
+{
+    int s = 0;
+    int e = v.size() - 1;
+    while (s <= e) {
+        int m = (s + e) / 2;
+        if (k < v[m]) e = m - 1;
+        else if (k > v[m]) s = m + 1;
+        else return m;
+    }
+    return -1;
+}
 </pre>
 
 <script src="js/quiz.js"></script>
