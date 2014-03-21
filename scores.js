@@ -55,7 +55,7 @@ app.scores.j3 = [ 20,   30,   44,   177,  40,   30,   20,   41,   145,  30,   50
 app.scores.i3 = [ 20,   30,   50,   182,  40,   30,   20,   45,   200,  25,   46,   15,   187,  null, 328 ];
 app.scores.gk = [ 20,   30,   38,   150,  39,   30,   5,    55,   141,  30,   45,   15,   135,  null, 93   ];
 app.scores.yt = [ 20,   30,   39,   90,   39,   20,   20,   25,   195,  20,   50,   0,    157,  null, 168 ];
-app.scores.ss = [ 20,   30,   13,   50,   40,   28,   10,   45,   147,  0,    27,   0,    153,  null, 65  ];
+app.scores.ss = [ 20,   30,   13,   50,   40,   28,   10,   45,   147,  30,   27,   20,   153,  null, 65  ];
 app.scores.vb = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ];
 app.onloadScores();
 
